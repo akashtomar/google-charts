@@ -1,0 +1,25 @@
+{
+  "name": "google-charts",
+  "version": "1.0.0",
+  "description": "Trying out google charts; ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "data",
+    "visualisation",
+    "google",
+    "charts",
+    "dashboards",
+    "dynamic",
+    "charts"
+  ],
+  "author": "akash tomar",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
