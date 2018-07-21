@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-    <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-  <!-- google charts -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home</title>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+        <!-- google charts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
+
 <body>
-    <div class="row">
-        <div class="col l4 m6 s12 ">
-                <div id="pieChart"></div>
+        <div class="row">
+                <div class="col l4 m6 s12 ">
+                        <div class="card">
+                                <div class="card-content">
+                                        <div id="pieChart"></div>
+                                </div>
+                        </div>
+                </div>
+                <div class="col l4 m6 s12 ">
+                        <div class="card">
+                                <div class="card-content">
+                                        <div id="barChart"></div>
+                                </div>
+                        </div>
+                        
+                </div>
+                <div class="col l4 m6 s12 ">
+                        <div class="card">
+                                <div class="card-content">
+                                        <div id="lineChart"></div>
+                                </div>
+                        </div>
+                        
+                </div>
         </div>
-    <div class="col l4 m6 s12 ">
-            <div id="barChart"></div>
-    </div>
-    <div class="col l4 m6 s12 ">
-            <div id="lineChart"></div>
-    </div>
-    </div>
-    
+
+        <div class="row">
+                <div class="col l4 m6 s12">
+                       <div class="card">
+                               <div class="card-content">
+                                       <div id="dash">
+                                                <div id="filter"></div>
+                                                <div id="dashChart"></div>
+                                       </div>
+                                       
+                               </div>
+                       </div> 
+                </div>
+        </div>
+        
 
 
 
-    <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
 
-<!-- my script -->
-<script src="js/charts/drawChart.js"></script>
+        <!-- my script -->
+        <script src="js/charts/drawChart.js"></script>
 
 </body>
+
 </html>

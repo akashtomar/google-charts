@@ -1,4 +1,4 @@
-google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.load('current', { 'packages': ['corechart', 'controls'] });
 
 google.charts.setOnLoadCallback(drawChart);
 
@@ -37,6 +37,17 @@ function drawChart() {
 		['2007',  1030,      540]
 	]);
 
+	var dataFilter = google.visualization.arrayToDataTable([
+		['Name', 'Donuts eaten'],
+		['Michael' , 5],
+		['Elisa', 7],
+		['Robert', 3],
+		['John', 2],
+		['Jessica', 6],
+		['Aaron', 1],
+		['Margareth', 8]
+	  ]);
+
 	var optionsLine = {
 		title: 'Company Performance',
 		curveType: 'function',
@@ -45,6 +56,31 @@ function drawChart() {
 
 	var chartLine = new google.visualization.LineChart(document.getElementById('lineChart'));
 	chartLine.draw(dataLine, optionsLine);
+
+
+	var dashboard = new google.visualization.Dashboard(document.getElementById('dash'));
+	var donutRangeSlider = new google.visualization.ControlWrapper({
+		'controlType': 'NumberRangeFilter',
+		'containerId': 'filter',
+		'options': {
+		  'filterColumnLabel': 'Donuts eaten'
+		}
+	  });
+	  var pieChartFiltered = new google.visualization.ChartWrapper({
+		'chartType': 'PieChart',
+		'containerId': 'dashChart',
+		'options': {
+		  'width': 300,
+		  'height': 300,
+		  'pieSliceText': 'value',
+		  'legend': 'right'
+		}
+	  });
+	  dashboard.bind(donutRangeSlider, pieChartFiltered);
+	  dashboard.draw(dataFilter);
+
+
+
 
   }
 
